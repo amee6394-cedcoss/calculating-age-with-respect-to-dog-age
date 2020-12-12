@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, red, yellow);        }
+
+        .center {
+            text-align: center;
+            
+        }
+
+        #in {
+            border-radius: 30px;
+            width: 400px;
+            height: 30px;
+            border:2px solid red;
+            color: black
+            /* text-shadow: 2px 2px 4px #000000; */
+            box-shadow: 5px 5px 5px rgb(228, 5, 5);
+        }
+
+        .btn {
+            border-radius: 30px;
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color: pink;
+            border:2px solid red;
+            box-shadow: 5px 5px 5px rgb(228, 5, 5);
+        }
+        .btn:hover{
+            background-color: darkcyan;
+        }
+
+        img {
+            width: 400px;
+            height: 250px;
+        }
+
+        p {
+            font-size: 30px;
+            border: 2px solid red;
+            height: 70px;
+            width: 600px;
+            margin-left: 27%;
+            color: blue;
+            background-color: thistle;
+            font-style: italic;
+            box-shadow: 5px 5px 5px rgb(228, 5, 5);
+        }
+
+        .flx {
+            display: flex;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #image {
+            margin-right: 20px;
+        }
+
+        h1{
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        }
+    </style>
+    <script>
+        function t() {
+            var x = 2;
+            var human = document.getElementById("in").value;
+            console.log(human);
+            if (human < 21) {
+                // y = document.getElementById("in").value;
+                z = human / 10.5;
+                w = z - parseInt(z);
+                q = w * 12;
+                document.getElementById("demo").innerHTML = parseInt(z) + " " + "year" + " " + parseInt(q) + " " + "months";
+                document.getElementById("demo1").innerHTML = "ARE YOU LOYAL JUST LIKE DOGS?";
+
+            }
+            else {
+                var a = document.getElementById("in").value;
+                b = a - 21;
+                c = b / 4;
+                h = x + c;
+                if (h > 13) {
+                    document.getElementById("demo1").innerHTML = "According to the guinness book of world record, you are older than the oldest dog";
+                    e = h - parseInt(h);
+                    f = e * 12;
+                    document.getElementById("demo").innerHTML = parseInt(h) + " " + "year" + " " + f + " " + "month";
+                }
+                else {
+                    document.getElementById("demo1").innerHTML = "ARE YOU LOYAL JUST LIKE DOGS?";
+                    e = h - parseInt(h);
+                    f = e * 12;
+                    document.getElementById("demo").innerHTML = parseInt(h) + " " + "year" + " " + f + " " + "month";
+                }
+            }
+        }
+        function i() {
+            document.getElementById("image").src = "shin.gif";
+            document.getElementById("image1").src = "shin2.gif";
+            document.getElementById("image2").src = "emoji1.gif";
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="center">
+        <img src="dog4.gif">
+        <h1>Dog loves you more than humans</h1>
+        <hr>
+        <div class="box">
+            <input id="in" type="text" placeholder="HUMAN YEAR">
+            <button class="btn" onclick="t();i()">Convert</button>
+            <H3>Dog's age</H3>
+            <p id="demo"></p>
+            <H3>Message</H3>
+            <p id="demo1"></p>
+        </div>
+        <div class="flx">
+        <img id="image" src="dog.gif">
+        <img id="image2" src="emoji.gif">
+        <img id="image1" src="dog2.gif">
+        </div>
+    </div>
+
+</body>
+</html>
